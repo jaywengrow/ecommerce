@@ -1,0 +1,403 @@
+<!-- Breadcrumbs Area Start -->
+<div class="breadcrumbs-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcrumb-single">
+                    <ul class="breadcrumbs">
+                        <li><a href="/products" title="Return to Products">
+                            <i class="fa fa-home"></i>
+                            Products
+                        </a></li>
+                        <li>
+                            <span>></span>
+                        </li>
+                        <li>Checkout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Area End -->   
+<!-- Check Out Area start -->
+<div class="check-out-area section-padding2">
+  <div class="container">
+    <div class="row">
+      <div class="coupon-area">
+        <div class="col-md-12">
+          <h1 class="heading-title">Procced to Checkout </h1>
+        </div>
+        <div class="col-md-12">
+          <div class="coupon-accordion">
+            <!-- ACCORDION START -->
+            <!-- <h3>Returning customer? <span id="showlogin">Click here to login</span></h3> -->
+            <div id="checkout-login" class="coupon-content">
+              <div class="coupon-info">
+                <p class="coupon-text">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
+                <form action="#">
+                  <p class="form-row">
+                    <label>Username or email <span class="required">*</span></label>
+                    <input type="text" />
+                  </p>
+                  <p class="form-row">
+                    <label>Password  <span class="required">*</span></label>
+                    <input type="text" />
+                  </p>
+                  <p><input type="submit" value="Login" />
+                    <label class="checbox-info">
+                      <input type="checkbox" />
+                       Remember me 
+                    </label>
+                  </p>
+                  <p class="lost-pass"><a href="#">Lost your password?</a></p>
+                </form>
+              </div>
+            </div>
+            <!-- ACCORDION END -->  
+            <!-- ACCORDION START -->
+            <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
+            <div id="checkout_coupon" class="coupon-checkout-content">
+              <div class="coupon-info-bottom">
+                <form action="#">
+                  <p class="checkout-coupon">
+                    <input type="text" placeholder="Coupon code" />
+                    <input type="submit" value="Apply Coupon" />
+                  </p>
+                </form>
+              </div>
+            </div>
+            <!-- ACCORDION END -->            
+          </div>
+        </div>
+      </div>        
+    </div>
+
+      <span class="payment-errors"></span>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="checkbox-form">
+            <h3 class="checkbox-title">Billing Details</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="form-row">
+                  <label>First Name<span class="required">*</span></label>
+                  <input type="text" value="<%= current_user.first_name %>"/>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p class="form-row">
+                  <label>Last Name<span class="required">*</span></label>
+                  <input type="text" value="<%= current_user.last_name %>" />
+                </p>
+              </div>
+              <div class="col-md-12">
+                <p class="form-row">
+                  <label>Company Name</label>
+                  <input type="text" />
+                </p>
+              </div>
+              <div class="col-md-12">
+                <p class="form-row">
+                  <label>Address<span class="required">*</span></label>
+                  <input type="text" placeholder="Street address" value="<%= current_user.address_1 %>" />
+                  <input type="text" placeholder="Apartment, suite, unit etc. (optional)" value="<%= current_user.address_2 %>"/>
+                </p>
+              </div>
+              <div class="col-md-12">
+                <p class="form-row">
+                  <label>Town / City<span class="required">*</span></label>
+                  <input type="text" placeholder="Town / City" value="<%= current_user.city %>"/>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p class="form-row">
+                  <label>State<span class="required">*</span></label>
+                  <input type="text" value="<%= current_user.state %>"/>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p class="form-row">
+                  <label>Postcode / Zip<span class="required">*</span></label>
+                  <input type="text" placeholder="Postcode / Zip" value="<%= current_user.zip %>"/>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p class="form-row">
+                  <label>Email Address<span class="required">*</span></label>
+                  <input type="text" value="<%= current_user.email %>" />
+                </p>
+              </div>
+              <div class="col-md-6">
+                <p class="form-row">
+                  <label>Phone<span class="required">*</span></label>
+                  <input type="text" placeholder="Phone" value="<%= current_user.phone %>" />
+                </p>
+              </div>
+              <!-- <div class="col-md-12">
+                <label class="checbox-info">
+                  <input id="cbox" type="checkbox">
+                  Create an account?
+                </label>
+                <div id="cbox_info">
+                  <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                  <p class="form-row">
+                    <label>Phone<span class="required">*</span></label>
+                    <input type="text" placeholder="Phone"/>
+                  </p>                  
+                </div>
+              </div> -->
+            </div>
+          <!--   <div class="different-address">
+              <div class="ship-different-title">
+                <h3>
+                  <label>Ship to a different address?</label>
+                  <input id="ship-box" type="checkbox" />
+                </h3>
+              </div>
+              <div id="ship-box-info" class="row">
+                <div class="col-md-6">
+                  <p class="form-row">
+                    <label>First Name<span class="required">*</span></label>
+                    <input type="text" />
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="form-row">
+                    <label>Last Name<span class="required">*</span></label>
+                    <input type="text" />
+                  </p>
+                </div>
+                <div class="col-md-12">
+                  <p class="form-row">
+                    <label>Company Name</label>
+                    <input type="text" />
+                  </p>
+                </div>
+                <div class="col-md-12">
+                  <p class="form-row">
+                    <label>Address<span class="required">*</span></label>
+                    <input type="text" placeholder="Street address"/>
+                    <input type="text" placeholder="Apartment, suite, unit etc. (optional)"/>
+                  </p>
+                </div>
+                <div class="col-md-12">
+                  <p class="form-row">
+                    <label>Town / City<span class="required">*</span></label>
+                    <input type="text" placeholder="Town / City"/>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="form-row">
+                    <label>State / County<span class="required">*</span></label>
+                    <input type="text" />
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="form-row">
+                    <label>Postcode / Zip<span class="required">*</span></label>
+                    <input type="text" placeholder="Postcode / Zip"/>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="form-row">
+                    <label>Email Address<span class="required">*</span></label>
+                    <input type="text"/>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p class="form-row">
+                    <label>Phone<span class="required">*</span></label>
+                    <input type="text" placeholder="Phone"/>
+                  </p>
+                </div>
+              </div>    
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="form-row order-notes">
+                    <label>Order Notes</label>
+                    <textarea placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                  </p>
+                </div>
+              </div>            
+            </div> -->
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="your-order">
+          <h3 class="checkbox-title">Your order</h3>
+            <div class="your-order-table table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="c-product-name">Product</th>
+                    <th class="c-product-total">Total</th>
+                  </tr>             
+                </thead>
+                <tbody>
+                  <% current_user.unpurchased_carted_products.each do |carted_product| %>
+                    <tr class="cart_item">
+                      <td class="c-product-name">
+                        <%= carted_product.product.name %> <strong class="product-quantity"> × <%= carted_product.quantity %></strong>
+                      </td>
+                      <td class="c-product-total">
+                        <span class="amount"><%= number_to_currency(carted_product.product.price * carted_product.quantity) %></span>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+                <tfoot>
+                  <tr class="cart-subtotal">
+                    <th>Cart Subtotal</th>
+                    <td><span class="amount"><%= number_to_currency(current_user.subtotal) %></span></td>
+                  </tr>
+                  <tr class="cart-subtotal">
+                    <th>Cart Tax</th>
+                    <td><span class="amount"><%= number_to_currency(current_user.tax) %></span></td>
+                  </tr>
+                  <tr class="cart-subtotal">
+                    <th>Shipping</th>
+                    <td><span class="amount">Free Shipping</td>
+                  </tr>
+                  <tr class="order-total">
+                    <th>Order Total</th>
+                    <td><strong><span class="amount"><%= number_to_currency(current_user.order_total) %></span></strong>
+                    </td>
+                  </tr>               
+                </tfoot>
+              </table>
+            </div>
+            <%= form_tag orders_path, id: "payment-form" , method: :post do %>
+              <div class="payment-method">
+                <div class="payment-accordion">
+                  <!-- ACCORDION START -->
+                  <h3>Direct Bank Transfer</h3>
+                  <div class="payment-content">
+                    <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                  </div>
+                  <!-- ACCORDION END -->  
+                  <!-- ACCORDION START -->
+                  <h3>Cheque Payment</h3>
+                  <div class="payment-content">
+                    <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                  </div>
+                  <!-- ACCORDION END -->  
+                  <!-- ACCORDION START -->
+                  <h3>Credit Card/PayPal <img src="/img/payment.png" alt="" /></h3>
+                  <div class="payment-content">
+                    <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+                    <% if order.errors.any? %>
+                      <div id="error_explanation">
+                        <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+                        <ul>
+                        <% order.errors.full_messages.each do |message| %>
+                          <li><%= message %></li>
+                        <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+
+                    <div class="field">
+                      <%= hidden_field_tag :user_id, current_user.id %>
+                    </div>
+
+                    <div class="field">
+                      <%= hidden_field_tag :subtotal, current_user.subtotal %>
+                    </div>
+
+                    <div class="field">
+                      <%= hidden_field_tag :tax, current_user.tax %>
+                    </div>
+
+                    <div class="field">
+                      <%= hidden_field_tag :total, current_user.order_total %>
+                    </div>
+
+                    <div class="checkbox-form">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-row">
+                            <label><span>Card Number</span></label><br>
+                            <input type="text" value="4242 4242 4242 4242" size="20" data-stripe="number">
+                            <div class="spacer-15"></div>
+                            
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-row">
+                            <label><span>Expiration (MM/YY)</span></label><br>
+                            <input type="text" value="12" size="2" data-stripe="exp_month">
+                          
+                            <span> / </span>
+                            <input type="text" value="2020" size="4" data-stripe="exp_year">
+                            <div class="spacer-15"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-row">
+                            <label>
+                              <span>CVC</span><br>
+                              <input type="text" value="123" size="4" data-stripe="cvc">
+                              <div class="spacer-15"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ACCORDION END -->                  
+                </div>
+                <div class="order-button-payment">
+                  <input type="submit" value="Place order" />
+                </div>
+              </div>              
+            <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Check Out Area End -->
+
+<script type="text/javascript">
+  Stripe.setPublishableKey('<%= ENV["stripe_publishable_key"] %>');
+
+  $(function() {
+    var $form = $('#payment-form');
+    $form.submit(function(event) {
+      // Disable the submit button to prevent repeated clicks:
+      $form.find('button').prop('disabled', true);
+
+      // Request a token from Stripe:
+      Stripe.card.createToken($form, stripeResponseHandler);
+
+      // Prevent the form from being submitted:
+      return false;
+    });
+  });
+
+  function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#payment-form');
+
+  if (response.error) { // Problem!
+    console.log(response);
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('button').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+    console.log(response);
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append($('<input type="hidden" name="stripeToken">').val(token));
+
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
+</script>

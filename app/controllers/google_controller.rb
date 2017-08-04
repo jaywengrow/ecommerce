@@ -1,0 +1,3 @@
+class GoogleController < ApplicationController
+  
+end

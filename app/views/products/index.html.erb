@@ -1,0 +1,291 @@
+<!-- Breadcrumbs Area Start -->
+<div class="breadcrumbs-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcrumb-single">
+                    <ul class="breadcrumbs">
+                        <li><a href="/" title="Return to Home">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a></li>
+                        <li>
+                            <span>></span>
+                        </li>
+                        <li><a href="index.html" title="Lighting">Products</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs Area End -->
+
+<!-- All Product Side Bar Area Start -->
+<div class="all-product-sidebar-area section-padding2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <aside class="widget-title">
+                    <p>Catalog</p>
+                </aside>
+                <div class="left-widget-content  indicator-banner">
+                    <!-- <aside class="enabled-filters widget"> -->
+                        <!-- <h3 class="widget-subtitle">Enabled filters:</h3> -->
+                        <!-- <ul> -->
+                            <!-- <li>Size: S -->
+                                <!-- <a href="#" title="Cancel"><i class="fa fa-remove pull-right"></i></a> -->
+                            <!-- </li> -->
+                            <!-- <li>Color: Beige -->
+                                <!-- <a href="#" title="Cancel"><i class="fa fa-remove pull-right"></i></a> -->
+                            <!-- </li> -->
+                            <!-- <li> -->
+                                <!-- Price: £ 36.09 - £ 61.00  -->
+                            <!-- </li> -->
+                        <!-- </ul> -->
+                    <!-- </aside> -->
+                    <aside class="left-widget-price widget">
+                        <h3 class="widget-subtitle">Price</h3>
+                        <div class="info-widget">
+                            <div class="price-filter">
+                                <div class="price-slider-amount">
+                                    <label>Range:</label>
+                                    <input type="text" id="amount" name="price"  placeholder="Add Your Price" />
+                                </div>
+                                <div id="slider-range"></div>
+                            </div>                                    
+                        </div>
+                    </aside>
+                    <aside class="left-widget-size widget">
+                        <h3 class="widget-subtitle">Size</h3>
+                        <div class="widget-info">
+                            <ul>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">S (4)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">M (5)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">L (3)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <aside class="left-widget-color widget">
+                        <h3 class="widget-subtitle">Color</h3>
+                        <div class="widget-info">
+                            <ul>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Beige (4)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">White (5)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Yellow (3)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Pink (3)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Black (3)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Blue (3)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Green (3)</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox">
+                                    <a href="#">Orange (3)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+                <div class="banner-image">
+                    <a href="#">
+                        <img alt="" src="/img/banner/28.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+    <img src="/img/bedroom.jpg" alt="" />
+    <h1 class="page-heading section-padding2">
+      <span class="cat-name pull-left">Home </span>
+      <span class="heading-counter pull-right">There are <%= @product_count %> products</span>
+    </h1>
+    <div class="shop-item-filter">
+      <div class="shop-tab clearfix">
+                        <!-- Nav tabs -->
+                        <ul class="tab-menu" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#grid" aria-controls="grid" role="tab" data-toggle="tab"><i class="fa fa-th-large"></i></a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#list" aria-controls="list" role="tab" data-toggle="tab"><i class="fa fa-th-list"></i></a>
+                            </li>
+                        </ul>
+        <div class="shop-tab-selectors pull-right">
+          <form action="#">
+            <div class="single-shop-form single-shop-show pull-left">
+              <label>Sort by</label>
+              <div class="shop-select">
+                <select>
+                  <option selected="selected">--</option>
+                  <option>Price: Lowest first</option>
+                  <option>Price: Highest first</option>
+                  <option>Product Name: A to Z</option>
+                  <option>Product Name: Z to A</option>
+                  <option>In stock</option>
+                  <option>Reference: Lowest first</option>
+                  <option>Reference: Highest first</option>
+                </select>
+              </div>
+            </div>
+            <div class="single-shop-form pull-left">
+              <label>Show</label>
+              <div class="shop-select">
+                <select>
+                  <option selected="selected">12</option>
+                  <option>6</option>
+                </select>
+              </div>
+            </div>
+            <div class="single-shop-form pul-right">                   
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="grid">
+        <div class="row">
+          <% @products.each do |product| %>
+            <div class="col-xs-12 col-sm-6 col-md-4 first-in-line first-item-of-tablet-line first-item-of-mobile-line">
+              <div class="single-product">
+                <!--product Content-->
+                <div class="product-img-content">
+                  <!--Product Image-->
+                  <div class="product-img">
+                    <a href="/products/<%= product.id %>" title="<%= product.name %>">
+                      <img src="<%= product.images[0].single.url %>" alt="">
+                    </a>                                            
+                  </div>
+                  <% if product.sale %>
+                    <span class="sale-label">Sale</span>
+                  <% end %>
+                  <!--Product Action-->
+                  <div class="product-action">
+                    <a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="#" title="Add to Wishlist"><i class="fa fa-star"></i>
+                    </a>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h5><a href="/products/<%= product.id %>" title="<%= product.name %>"><%= product.name %></a></h5>
+                  <!--Product Rating-->
+                  <div class="rating-icon">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <!--Product Price-->
+                  <div class="product-price">
+                    <span class="new-price"><%= number_to_currency(product.price) %></span>
+                  </div>
+                </div>
+              </div>                  
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="list">
+        <div class="row">
+          <% @products.each do |product| %>
+            <div class="single-shop-product">
+              <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                   <div class="left-item">
+                    <!--Product Image-->
+                    <a href="/products/<%= product.id %>" title="<%= product.name %>">
+                      <img src="<%= product.images[0].single.url %>" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-8">
+                  <div class="deal-product-content ">
+                    <h5><a href="/products/<%= product.id %>" title="<%= product.name %>"><%= product.name %></a></h5>
+                    <!--Product Price-->
+                    <div class="product-price">
+                      <span class="new-price"><%= number_to_currency(product.price) %></span>
+                    </div>
+                    <!--Product Rating-->
+                    <div class="rating-icon">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                    <!--Product Action-->
+                    <p><%= product.description %></p>
+                    <div class="availability">
+                      <span>In stock</span>
+                    </div>
+                    <div class="deal-product-action">
+                      <a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
+                      <a href="#" title="Add to Wishlist"><i class="fa fa-star"></i>
+                      </a>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>                      
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pagination-content">
+                <p class="pull-left">Showing 1 - 6 of <%= @product_count %> items</p>
+                <div class="pagination-button pull-right">
+                    <ul class="pagination">
+                        <li class="pagination-previous" id="pagination-previous-bottom">
+                            <a href="#"><i class="fa fa-chevron-left"></i>Previous</a>
+                        </li>
+                        <li><a href="#"><span>1</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="pagination-next" id="pagination-next-bottom">
+                            <a href="#">Next<i class="fa fa-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                    <button class="show-pagi">Show all</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+        </div>
+    </div>
+</div>
+<!-- All Product Side Bar Area End -->
+

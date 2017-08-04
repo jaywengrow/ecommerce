@@ -1,0 +1,68 @@
+<!-- Breadcrumbs Area Start -->
+<div class="breadcrumbs-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb-single">
+          <ul class="breadcrumbs">
+            <li>
+              <a href="/" title="Return to Home">
+                <i class="fa fa-home"></i>Home
+              </a>
+            </li>
+            <li>
+                <span>></span>
+            </li>
+            <li>Log In</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumbs Area End --> 
+  
+<!-- Account Area Start -->
+<div class="account-area section-padding2">
+  <div class="container">
+    <div class="row">
+      <div class="account-details">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-md-offset-3 col-lg-offset-3 col-sm-offset-3">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "create-account-form" }) do |f| %>
+            <h1 class="heading-title">Log In</h1>
+            
+            <p class="form-row">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </p>
+
+            <p class="form-row">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </p>
+
+            <% if devise_mapping.rememberable? -%>
+                <p class="form-row">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+                </p>
+              <% end -%>
+
+            <p class="submit">  
+              <button type="submit" id="submitlogin" name="SubmitLogin" class="">
+                <span>Log In</span>
+              </button>
+            </p>
+
+            <div class="spacer-15"></div>
+            
+            <p>
+              <%= render "devise/shared/links" %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Account Area End -->

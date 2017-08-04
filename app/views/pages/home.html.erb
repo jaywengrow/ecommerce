@@ -1,0 +1,150 @@
+<!-- Slider With Banner Area -->
+      <div class="slider-with-banner-area">
+          <div class="col-50">
+              <!--Slider Area Start-->
+              <div class="slider-area">
+                  <div class="bend niceties preview-1">
+          <div id="ensign-nivoslider-3" class="slides">   
+             <a href="/products"><img src="/img/slider/5.jpg" alt=""/></a>
+             <a href="/products"> <img src="/img/slider/6.jpg" alt=""/></a>
+          </div>
+                  </div>
+              </div>
+              <!--Slider Area End-->                 
+          </div>  
+          <div class="col-50">
+              <!--Banner Area Start-->
+              <div class="banner-area">
+                  <div class="col-100">
+                      <div class="banner-image">
+                          <a href="/products">
+                              <img src="/img/banner/10.jpg" alt="">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-100">
+                      <div class="col-50">
+                          <div class="banner-image">
+                              <a href="/products">
+                                  <img src="/img/banner/11.jpg" alt="">
+                              </a>
+                          </div>                            
+                      </div>
+                      <div class="col-50">
+                          <div class="banner-image">
+                              <a href="/products">
+                                  <img src="/img/banner/12.jpg" alt="">
+                              </a>
+                          </div>                            
+                      </div>
+                  </div> 
+              </div>
+              <!--Banner Area End-->                  
+          </div>         
+      </div>
+      <!-- Slider With Banner Area End -->
+  <!--Featured Area Start-->
+  <div class="featured-area4">
+      <div class="container-fluid">
+      <div class="section-title">
+        <h4>Featured products</h4>
+      </div>
+          <div class="row">
+        <!--Product List Start-->
+        <div class="featured-product-list indicator-style">
+          <% @products.each do |product| %>
+            <!--Single Product -->
+            <div class="col-md-3 col-sm-6">
+              <div class="single-product">
+                <!--product Content-->
+                <div class="product-img-content">
+                  <!--Product Image-->
+                  <div class="product-img">
+                    <a href="/products/<%= product.id %>" title="<%= product.name %>">
+                      <img src="<%= product.images[0].featured.url %>" alt="">
+                    </a>                                        
+                  </div>
+                  <% if product.sale %>
+                    <span class="sale-label">Sale</span>
+                  <% end %>
+                  <!--Product Action-->
+                  <!-- <div class="product-action">
+                    <a href="#" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="#" title="Add to Wishlist"><i class="fa fa-star"></i>
+                    </a>
+                    <a href="#" title="Add to Compare"><i class="fa fa-files-o"></i>
+                    </a>
+                    <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal"><i class="fa fa-expand"></i></a>
+                  </div> -->
+                </div>
+                <div class="product-content">
+                  <h5><a href="/products/<%= product.id %>" title="<%= product.name %>"><%= product.name %></a></h5>
+                  <!--Product Rating-->
+                  <!-- <div class="rating-icon">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div> -->
+                  <!--Product Price-->
+                  <div class="product-price">
+                    <span class="new-price"><%= number_to_currency(product.price) %></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Single Product -->
+          <% end %>
+        </div>
+        <!--Product List Start-->
+          </div>
+      </div>
+  </div>
+  <!--Featured Area End-->  
+  <!--Banner Area Start-->
+  <div class="banner-area2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <div class="banner-image">
+            <a href="/products">
+              <img src="/img/banner/13.jpg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="banner-image indicator-banner">
+              <a href="/products">
+                  <img src="/img/banner/14.jpg" alt="">
+              </a>
+          </div>
+          <div class="row">
+              <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12"> 
+                  <div class="banner-image">
+                      <a href="/products">
+                          <img src="/img/banner/1.jpg" alt="">
+                      </a>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12"> 
+                  <div class="banner-image">
+                      <a href="/products">
+                          <img src="/img/banner/2.jpg" alt="">
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <div class="banner-image">
+            <a href="/products">
+              <img src="/img/banner/15.jpg" alt="">
+            </a>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <!--Banner Area End-->    
+

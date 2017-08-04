@@ -1,0 +1,39 @@
+<div class="container">
+  <ul>
+    <% @account_summaries.items.each do |item| %>
+      <li><%= item.name %> (<%= item.id %>)
+        <ul>
+          <% item.web_properties.each do |property| %>
+            <li><%= property.name %> (<%= property.id %>)
+              <ul>
+                <% property.profiles.each do |profile| %>
+                  <li><%= profile.name %> (<%= profile.id %>)</li>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+
+  <hr>
+
+  <table class="table table-striped">
+    <tr>
+      <% @product_headers.each do |header| %>
+        <th><%= header.name %></th>
+      <% end %>
+    </tr>
+
+    <% @product_data.each do |data| %>
+      <tr>
+        <% data.each_with_index do |value, index| %>
+          
+          
+            <td><%= value %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
